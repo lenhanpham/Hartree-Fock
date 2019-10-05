@@ -299,7 +299,7 @@ def SCF(H, X, Z_H, Z_He, R, V):
         #Energy2 += np.sum(0.5*P*(H+F))
 
         print('Electronic energy = ', Energy)
-        #print('Electronic energy calculated py numpy.sum = ', Energy2)
+        #print('Electronic energy calculated by numpy.sum = ', Energy2)
 
 
 
