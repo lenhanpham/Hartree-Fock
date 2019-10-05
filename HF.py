@@ -191,9 +191,10 @@ def AO_Integral(N,R,Zeta1,Zeta2,Z_H,Z_He):
     return S12,T11,T12,T22,V11H,V12H,V22H,V11He,V12He,V22He,V1111,V2111,V2121,V2211,V2221,V2222
 
 
-
-### Construct the Hamiltonian which is the summation of all integrals, and the overlap matrix 
-### Since the global variables use several arguments in the construction of AOs, we need to have them all in Hamiltonian 
+#########################################################################################################################
+### Construct the core Hamiltonian which is the summation of all integrals, and the overlap matrix 
+### Construct overlap matrix and initialize the 4-rank tensor of two-electron integrals
+#########################################################################################################################
 
 def Collect(S12,T11,T12,T22,V11H,V12H,V22H,V11He,V12He,V22He,V1111,V2111,V2121,V2211,V2221,V2222):
     """
@@ -246,7 +247,10 @@ def Collect(S12,T11,T12,T22,V11H,V12H,V22H,V11He,V12He,V22He,V1111,V2111,V2121,V
 
 
  
-############ Implement SCF procedure  ############
+########################################################
+# Implement SCF procedure
+# Change parameters here
+########################################################
 
 def SCF(H, X, Z_H, Z_He, R, V): 
     """
@@ -349,7 +353,7 @@ def SCF(H, X, Z_H, Z_He, R, V):
             break
 
 
-
+####### Diagonalize Fock matrix ###########
 def Diag(Fprime):
     """
     This function is to diagonalize symmetric matrices using the Jacobi algorithm
@@ -385,7 +389,7 @@ def Diag(Fprime):
     return Cprime, E
 
 
-##### HF calculation ####
+################### HF calculation #############
 
 def HFCALC(N, R, Zeta1, Zeta2, Z_H, Z_He):
     """
