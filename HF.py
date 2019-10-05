@@ -272,8 +272,8 @@ def SCF(H, X, Z_H, Z_He, R, V):
         print("Interation number: {:03d}" .format(Iter))
 
 
-    ######### Step 2: Calculate the Fock matrix ######
-    ### Calculate two-electron part of the Fock matrix from the density matrix P
+     ######### Step 2: Calculate the Fock matrix ######
+     ### Calculate two-electron part of the Fock matrix from the density matrix P
         G = np.zeros([2,2])
 
         for i in range(2):
