@@ -7,4 +7,4 @@ Written by LE NHAN PHAM, Department of Chemistry, KU LEUVEN.
 1. Download the file HF.py
 2. Install Python 3 on your computer
 3. Change contraction of basis set (N =1, 2, 3)
-4. Open Terminal and python HF.py 
+4. Open Terminal and type python HF.py 
